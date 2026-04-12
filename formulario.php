@@ -1,7 +1,7 @@
 <?php
 // ============================================
 // Arquivo: cadastrar.php
-// Função: Cadastro de livros (área restrita)
+// Função: Formulário de livros, adiciona, edita e remove
 // ============================================
 
 // Iniciar a sessão
@@ -76,12 +76,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta titulo="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Teste Básico do Cadastrar</title>
+        <title>Página para adiconar livros novos livros, editar e excluir</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
@@ -95,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </head>
 
     <body class="bg-white">
-     <!-- Formulário de Cadastro -->
+     <!-- Formulário de Cadastro --> 
 
 </body>
 </html>
