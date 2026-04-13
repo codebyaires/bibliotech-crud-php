@@ -15,6 +15,12 @@ $sucesso = "";
 $erro = "";
 $editando = NULL;
 
+if (isset($_GET["excluir"])) {
+    $id = $_GET["excluir"];
+    $sql = "DELETE FROM livros WHERE id = '$id'";
+    $res = mysqli_query($conexao, $sql);
+}
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Recebe os dados
     $autor = trim($_POST["autor"] ?? "");
