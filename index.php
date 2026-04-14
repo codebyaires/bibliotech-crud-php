@@ -49,7 +49,7 @@ $resultado_livros = mysqli_query($conexao, $sql_livros);
 
     <!-- GRADE DE LIVROS -->
     <main class="max-w-6xl mx-auto px-6 py-8 flex-1">
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
 
             <div class="bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden flex flex-col border-2 border-green-400">
                 <div class="relative">
@@ -57,7 +57,7 @@ $resultado_livros = mysqli_query($conexao, $sql_livros);
                         <?php if(!empty($livro['capa'])): ?>
                             <img src="uploads/<?php echo $livro['capa']; ?>" alt="Capa" class="w-full h-full object-cover">
                         <?php else: ?>
-                            <span class="text-white opacity-50 text-sm font-semibold tracking-wider uppercase">Sem Capa</span>
+                            <img src="uploads/placeholder.png" class="w-full h-full object-cover">
                         <?php endif; ?>
                     </div>
   
