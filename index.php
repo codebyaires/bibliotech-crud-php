@@ -50,6 +50,7 @@ $resultado_livros = mysqli_query($conexao, $sql_livros);
     <!-- GRADE DE LIVROS -->
     <main class="max-w-6xl mx-auto px-6 py-8 flex-1">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <?php while ($livro = mysqli_fetch_assoc($resultado_livros)): ?>
 
             <div class="bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden flex flex-col border-2 border-green-400">
                 <div class="relative">
@@ -63,9 +64,9 @@ $resultado_livros = mysqli_query($conexao, $sql_livros);
   
                 </div>
                 <div class="p-5 flex flex-col flex-1">
-                    <h3 class="font-bold text-gray-800 text-base mb-2">A Revolução dos Bichos</h3>
+                    <h3 class="font-bold text-gray-800 text-base mb-2"><?php echo $livro['titulo'];?>></h3>
                     <p class="text-sm text-gray-30 mb-4 flex-1">
-                        George Orwell
+                        <?php echo $livro['autor']; ?>
                     </p>
                    
                     <a href="livro.html" class="bg-senai-green text-white text-sm font-semibold py-2.5 rounded-lg text-center hover:bg-green-600 transition">
@@ -73,7 +74,7 @@ $resultado_livros = mysqli_query($conexao, $sql_livros);
                     </a>
                 </div>
             </div>
-
+             <?php endwhile; ?>
         </div>
     </main>
 
