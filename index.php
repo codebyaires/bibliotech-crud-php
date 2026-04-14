@@ -54,18 +54,19 @@ $resultado_livros = mysqli_query($conexao, $sql_livros);
 
             <div class="bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden flex flex-col border-2 border-green-400">
                 <div class="relative">
-                    <div class="bg-gradient-to-br from-orange-500 to-orange-700 h-40 flex items-center justify-center">
+                    <div class="bg-gradient-to-br from-orange-500 to-orange-700 h-72 flex items-center justify-center">
+
                         <?php if(!empty($livro['capa'])): ?>
-                            <img src="uploads/<?php echo $livro['capa']; ?>" alt="Capa" class="w-full h-full object-cover">
+                            <img src="uploads/<?php echo $livro['capa']; ?>" alt="Capa" class="w-full h-full object-cover object-center">
                         <?php else: ?>
-                            <img src="uploads/placeholder.png" class="w-full h-full object-cover">
+                            <img src="uploads/placeholder.png" class="w-full h-full object-cover object-center">
                         <?php endif; ?>
                     </div>
   
                 </div>
-                <div class="p-5 flex flex-col flex-1">
-                    <h3 class="font-bold text-gray-800 text-base mb-2"><?php echo $livro['titulo'];?>></h3>
-                    <p class="text-sm text-gray-30 mb-4 flex-1">
+                <div class="p-3 flex flex-col flex-1">
+                    <h3 class="font-bold text-gray-800 text-base mb-1"><?php echo $livro['titulo'];?>></h3>
+                    <p class="text-sm text-gray-30 mb-3 flex-1">
                         <?php echo $livro['autor']; ?>
                     </p>
                    
