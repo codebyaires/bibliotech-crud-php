@@ -30,7 +30,7 @@ $resultado_livros = mysqli_query($conexao, $sql_livros);
 
     <!-- NAVBAR -->
     <nav class="bg-senai-red shadow-md sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-3 flex items-center gap-6">
+        <div class="max-w-6xl mx-auto px-2 py-3 flex items-center gap-6">
             <a href="index.html" class="flex items-center gap-2 text-white font-extrabold text-lg">📚​ ALEXANDRIA</a>
             <input type="text" class="rounded-full pl-10 pr-4 py-2" placeholder="Pesquisar...">
             <div class="flex-1"></div>
@@ -46,6 +46,10 @@ $resultado_livros = mysqli_query($conexao, $sql_livros);
             <p class="text-sm text-gray-500 mt-1">Escolha um livro que deseja conhecer melhor</p>
         </div>
     </div>
+
+        <div class="max-w-6xl mx-auto px-5 py-3 flex items-center gap-5">
+        <a href="formulario.php"><strong class="text-black">Adicionar novos Livros</strong></a>
+        </div>
 
     <!-- GRADE DE LIVROS -->
     <main class="max-w-6xl mx-auto px-6 py-8 flex-1">
