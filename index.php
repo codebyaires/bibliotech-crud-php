@@ -47,11 +47,15 @@ $resultado_livros = mysqli_query($conexao, $sql_livros);
         </div>
     </div>
 
+         <!-- Botão para adicionar novo livro -->
         <div class="max-w-6xl mx-auto px-5 py-3 flex items-center gap-5">
-        <a href="formulario.php"><strong class="text-black">Adicionar novos Livros</strong></a>
+        <a href="formulario.php" 
+               class="bg-senai-blue text-white font-semibold px-4 py-2 rounded-lg hover:bg-senai-blue-dark transition">
+                + Adicionar Livro
+        </a>
         </div>
 
-    <!-- GRADE DE LIVROS -->
+    <!-- Contéudo Principal -->
     <main class="max-w-6xl mx-auto px-6 py-8 flex-1">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <?php while ($livro = mysqli_fetch_assoc($resultado_livros)): ?>
