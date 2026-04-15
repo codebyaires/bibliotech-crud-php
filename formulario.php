@@ -15,12 +15,22 @@ $sucesso = "";
 $erro = "";
 $editando = NULL;
 
+// Pegar dados para edição
+if (isset($_GET["editar"])) {
+    $id = $_GET["editar"];
+    $sql = "SELECT * FROM livros WHERE id = '$id'";
+    $res = mysqli_query($conexao, $sql);
+    $editando = mysqli_fetch_assoc($res);
+}
+
+// Excluir livro
 if (isset($_GET["excluir"])) {
     $id = $_GET["excluir"];
     $sql = "DELETE FROM livros WHERE id = '$id'";
     $res = mysqli_query($conexao, $sql);
 }
 
+// Verificar se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Recebe os dados
     $autor = trim($_POST["autor"] ?? "");
@@ -186,7 +196,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                             </div>
                             <!-- Sinopse -->
                             <div class="mb-5">
-                                <label class="form-label">Sinopse </label>
+                                <label class="form-label">Sinopse (opcional)</label>
                                 <textarea
                                     name="descricao"
                                     rows="4"
@@ -218,7 +228,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                 <button type="submit" class="bg-senai-blue hover:bg-senai-blue-dark text-white font-bold px-6 py-2.5 rounded-lg text-sm transition flex items-center gap-2">
                                     💾 Salvar Alterações
                                 </button>
-                                <a href="cursos.php" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold px-6 py-2.5 rounded-lg text-sm transition">
+                                <a href="index.php" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold px-6 py-2.5 rounded-lg text-sm transition">
                                     Cancelar
                                 </a>
                             </div>
