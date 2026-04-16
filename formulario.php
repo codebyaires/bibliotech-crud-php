@@ -1,7 +1,7 @@
 <?php
 // ============================================
 // Arquivo: cadastrar.php
-// Função: Formulário de livros, adiciona, edita e remove
+// Função: Formulário de livros, adiciona e edita 
 // ============================================
 
 // Iniciar a sessão
@@ -21,13 +21,6 @@ if (isset($_GET["editar"])) {
     $sql = "SELECT * FROM livros WHERE id = '$id'";
     $res = mysqli_query($conexao, $sql);
     $editando = mysqli_fetch_assoc($res);
-}
-
-// Excluir livro
-if (isset($_GET["excluir"])) {
-    $id = $_GET["excluir"];
-    $sql = "DELETE FROM livros WHERE id = '$id'";
-    $res = mysqli_query($conexao, $sql);
 }
 
 // Verificar se o formulário foi enviado

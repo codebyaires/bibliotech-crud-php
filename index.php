@@ -6,6 +6,17 @@ require_once "config/conexao.php";
 $sql_livros = "SELECT * FROM livros ORDER BY id DESC";
 $resultado_livros = mysqli_query($conexao, $sql_livros);
 
+// Excluir livro
+if (isset($_GET["excluir"])) {
+    $id = $_GET["excluir"];
+    $sql = "DELETE FROM livros WHERE id = '$id'";
+    $res = mysqli_query($conexao, $sql);
+    
+    // Redireciona de volta para a lista após excluir
+     header("Location: cursos.php");
+    exit;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -79,6 +90,12 @@ $resultado_livros = mysqli_query($conexao, $sql_livros);
                         Ler mais →
                     </a>
                 </div>
+
+            <div class="flex items-center justify-center gap-1.5">
+                <a href="formulario.php?editar=<?php echo $livro['id']; ?>" class="bg-yellow-500 text-white text-xs px-2.5 py-1.5 rounded-md hover:bg-yellow-600 transition" title="Editar">✏ Editar</a>
+                <a href="index.php?excluir=<?php echo $livro['id']; ?>" onclick="return confirm('Excluir este Livro?')" class="bg-senai-red text-white text-xs px-2.5 py-1.5 rounded-md hover:bg-red-700 transition" title="Excluir">🗑</a>
+            </div>
+
             </div>
              <?php endwhile; ?>
         </div>
