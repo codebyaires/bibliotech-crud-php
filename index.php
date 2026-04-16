@@ -7,8 +7,6 @@ $sql_livros = "SELECT * FROM livros ORDER BY id DESC";
 $resultado_livros = mysqli_query($conexao, $sql_livros);
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -63,12 +61,11 @@ $resultado_livros = mysqli_query($conexao, $sql_livros);
             <div class="bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden flex flex-col border-2 border-green-400">
                 <div class="relative">
                     <div class="bg-gradient-to-br from-orange-500 to-orange-700 h-72 flex items-center justify-center">
-
-                        <?php if(!empty($livro['capa'])): ?>
-                            <img src="uploads/<?php echo $livro['capa']; ?>" alt="Capa" class="w-full h-full object-cover object-center">
-                        <?php else: ?>
-                            <img src="uploads/placeholder.png" class="w-full h-full object-cover object-center">
-                        <?php endif; ?>
+                    <?php if(!empty($livro['capa'])): ?>
+                                <img src="uploads/<?php echo $livro['capa']; ?>" alt="Capa" class="w-full h-full object-cover">
+                            <?php else: ?>
+                                <span class="text-white opacity-50 text-xs uppercase tracking-wider">S/ Capa</span>
+                            <?php endif; ?>
                     </div>
   
                 </div>
