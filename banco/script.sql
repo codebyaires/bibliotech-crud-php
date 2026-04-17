@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS livros
     titulo VARCHAR(255) NOT NULL,
     ano_publicacao INT NOT NULL,
     genero VARCHAR(255) NOT NULL,
-    sinopse VARCHAR(500) NOT NULL,
+    sinopse TEXT NOT NULL,
     capa VARCHAR(255),
     PRIMARY KEY (id)
 )
