@@ -246,20 +246,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                             </div>
 
                         </form>
-                    </div>
-                </div>
-
                     <!-- Aviso exclusão -->
-
                     <?php if($editando): ?>
                         <div class="bg-red-50 border border-red-200 rounded-xl p-4">
                             <h4 class="font-bold text-senai-red text-sm mb-2">⚠ Zona de Perigo</h4>
-                            <a href="?excluir=<?php echo $editando['id']; ?>" onclick="return confirm('Tem certeza? Esta ação não pode ser desfeita.')" class="block text-center w-full bg-senai-red text-white text-xs font-bold py-2 rounded-lg hover:bg-red-700 transition">
+                            <a href="index.php?excluir=<?php echo $editando['id']; ?>" onclick="return confirm('Tem certeza? Esta ação não pode ser desfeita.')" class="block text-center w-full bg-senai-red text-white text-xs font-bold py-2 rounded-lg hover:bg-red-700 transition">
                                 🗑 Excluir este livro
                             </a>
                         </div>
                         <?php endif; ?>
-
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
