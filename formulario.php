@@ -76,6 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                titulo = '$titulo', 
                                sinopse = '$sinopse',
                                autor = '$autor',
+                               genero = '$genero',
                                ano_publicacao = '$ano_publicacao',
                                capa = '$nome_capa'
                                WHERE id = '$id'";
