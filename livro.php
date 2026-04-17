@@ -34,7 +34,7 @@ $livro = mysqli_fetch_assoc(mysqli_query($conexao, $sql_livro));
     <!-- NAVBAR -->
     <nav class="bg-senai-red shadow-md sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-2 py-3 flex items-center gap-6">
-            <a href="index.html" class="flex items-center gap-2 text-white font-extrabold text-lg">📚​ ALEXANDRIA</a>
+            <a href="index.php" class="flex items-center gap-2 text-white font-extrabold text-lg">📚​ ALEXANDRIA</a>
             <div class="flex-1"></div>
             <!-- <a href="login.html" class="bg-senai-red text-white text-xs font-semibold px-3 py-1.5 rounded hover:bg-red-700 transition">Sair</a> -->
         </div>

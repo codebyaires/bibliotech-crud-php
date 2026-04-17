@@ -40,7 +40,7 @@ if (isset($_GET["excluir"])) {
     <!-- NAVBAR -->
     <nav class="bg-senai-red shadow-md sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-2 py-3 flex items-center gap-6">
-            <a href="index.html" class="flex items-center gap-2 text-white font-extrabold text-lg">📚​ ALEXANDRIA</a>
+            <a href="index.php" class="flex items-center gap-2 text-white font-extrabold text-lg">📚​ ALEXANDRIA</a>
             <input type="text" class="rounded-full pl-10 pr-4 py-2" placeholder="Pesquisar...">
             <div class="flex-1"></div>
             <span class="text-white">Hello, <strong class="text-white">User</strong></span>
