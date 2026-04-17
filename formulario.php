@@ -208,7 +208,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                     class="form-input resize-none"
                                     placeholder="Descreva o livro fazendo uma sinopse sobre..."
                                 ><?php echo $editando['sinopse'] ?? ''; ?></textarea>
-                                <p class="text-xs text-gray-400 mt-1">Seja claro sobre as principais partes do lviro.</p>
+                                <p class="text-xs text-gray-400 mt-1">Seja claro sobre as principais partes do livro.</p>
                             </div>
 
                             <!-- IMAGEM DE CAPA -->

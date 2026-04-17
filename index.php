@@ -13,7 +13,7 @@ if (isset($_GET["excluir"])) {
     $res = mysqli_query($conexao, $sql);
     
     // Redireciona de volta para a lista após excluir
-     header("Location: cursos.php");
+     header("Location: index.php");
     exit;
 }
 
@@ -86,7 +86,7 @@ if (isset($_GET["excluir"])) {
                         <?php echo $livro['autor']; ?>
                     </p>
                    
-                    <a href="livro.html" class="bg-senai-green text-white text-sm font-semibold py-2.5 rounded-lg text-center hover:bg-green-600 transition">
+                    <a href="livro.php" class="bg-senai-green text-white text-sm font-semibold py-2.5 rounded-lg text-center hover:bg-green-600 transition">
                         Ler mais →
                     </a>
                 </div>
