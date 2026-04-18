@@ -76,8 +76,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                titulo = '$titulo', 
                                sinopse = '$sinopse',
                                autor = '$autor',
+                               genero = '$genero',
                                ano_publicacao = '$ano_publicacao',
-                               capa = '$nome_capa',
+                               capa = '$nome_capa'
                                WHERE id = '$id'";
             } else {
                 $sql_salvar = "INSERT INTO livros (titulo, sinopse, autor, ano_publicacao, capa) 
@@ -119,9 +120,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         .form-label { display:block; font-size:12px; font-weight:600; color:#6b7280; margin-bottom:6px; text-transform:uppercase; letter-spacing:.05em; }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex">
-
-    <!-- SIDEBAR -->
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    
+    <!-- NAVBAR -->
+    <nav class="bg-senai-red shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-2 py-3 flex items-center gap-6">
+            <a href="index.php" class="flex items-center gap-2 text-white font-extrabold text-lg">📚​ ALEXANDRIA</a>
+            <div class="flex-1"></div>
+            <!-- <a href="login.html" class="bg-senai-red text-white text-xs font-semibold px-3 py-1.5 rounded hover:bg-red-700 transition">Sair</a> -->
+        </div>
+    </nav>
 
     <!-- CONTEÚDO -->
     <main class="flex-1 flex flex-col">
@@ -239,20 +247,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                             </div>
 
                         </form>
-                    </div>
-                </div>
-
                     <!-- Aviso exclusão -->
-
                     <?php if($editando): ?>
                         <div class="bg-red-50 border border-red-200 rounded-xl p-4">
                             <h4 class="font-bold text-senai-red text-sm mb-2">⚠ Zona de Perigo</h4>
-                            <a href="?excluir=<?php echo $editando['id']; ?>" onclick="return confirm('Tem certeza? Esta ação não pode ser desfeita.')" class="block text-center w-full bg-senai-red text-white text-xs font-bold py-2 rounded-lg hover:bg-red-700 transition">
+                            <a href="index.php?excluir=<?php echo $editando['id']; ?>" onclick="return confirm('Tem certeza? Esta ação não pode ser desfeita.')" class="block text-center w-full bg-senai-red text-white text-xs font-bold py-2 rounded-lg hover:bg-red-700 transition">
                                 🗑 Excluir este livro
                             </a>
                         </div>
                         <?php endif; ?>
-
+                    </div>
+                </div>
                 </div>
             </div>
         </div>

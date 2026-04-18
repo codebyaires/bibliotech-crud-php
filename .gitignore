@@ -1,0 +1,2 @@
+# Ignora todas as imagens que os usuários fizerem upload
+/uploads/*
