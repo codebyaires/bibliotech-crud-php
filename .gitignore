@@ -1,2 +1,5 @@
 # Ignora todas as imagens que os usuários fizerem upload
 /uploads/*
+
+# MAS abre uma exceção e obriga o Git a rastrear o nosso fallback de segurança
+!/uploads/placeholder.png
